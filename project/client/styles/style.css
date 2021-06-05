@@ -67,5 +67,6 @@ body {
   background-color: brown;
 }
 .bord {
-  border: 2px solid black;
+  box-shadow: 2px 2px 4px 4px black;
+  margin-bottom: 35px;
 }
