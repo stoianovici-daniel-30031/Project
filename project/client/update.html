@@ -1,0 +1,38 @@
+<html>
+<head>
+    <script type="text/javascript" src="libs/vue.js"></script><script type="text/javascript" src="libs/axios.js"></script>
+    <link rel="stylesheet" href="styles/update.css"/>
+
+</head>
+<style>
+    body {
+        background-image: url('blue_body_top.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        color: white;
+    }
+
+</style>
+<body>
+
+<a href="index.html">Home</a>
+
+<div id="update" class="box">
+    <p>Image: <input type="text" v-model="game.image"></p>
+    <p>Title: <input type="text" v-model="game.title"></p>
+    <p>Release Date: <input type="text" v-model="game.releasedate"></p>
+    <p>Developer: <input type="text" v-model="game.developer"></p>
+    <p>Publisher : <input type="text" v-model="game.publisher"></p>
+    <p>Genre: <input type="text" v-model="game.genre"></p>
+    <p>Os: <input type="text" v-model="game.OS"></p>
+    <p>Language: <input type="text" v-model="game.language"></p>
+    <p>Description: <input type="text" v-model="game.description"></p>
+    <p>Price: <input type="text" v-model="game.price"></p>
+    <button v-on:click="update(game.id)">Save</button>
+    <p>"You updated stuff! GOOD JOB!"</p>
+
+</div>
+<script src="src/update.js"></script>
+</body>
+</html>

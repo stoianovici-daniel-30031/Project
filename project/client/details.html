@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles/details.css" />
+    <script type="text/javascript" src="libs/vue.js"></script>
+    <script type="text/javascript" src="libs/axios.js"></script>
+</head>
+
+<body>
+<a href="index.html">Home</a>
+<div id="details">
+    <h1>Details for id: {{ id }}</h1>
+    <img :src="game.image" height="300px">
+    <div class="container">
+        <div class="custom"></div>
+        <div class="label">Title:</div>
+        <div class="value">{{game.title}}</div>
+    </div>
+
+    <div class="label">Developer:</div>
+
+    <div class="value">{{game.developer}}</div>
+
+    <div class="label">Publisher:</div>
+    <div class="value">{{game.publisher}}</div>
+
+    <div class="label">Price:</div>
+    <div class="value">{{game.price}} </div>
+
+    <div class="label">Genre:</div>
+    <div class="value">{{game.genre}}</div>
+
+    <div class="label">Release Date:</div>
+    <div class="value">{{game.releasedate}}</div>
+
+    <div class="label">Language:</div>
+    <div class="value">{{game.language}}</div>
+
+    <div class="label">Operating System:</div>
+    <div class="value">{{game.OS}}</div>
+
+    <div class="label">Description:</div>
+    <div class="value">{{game.description}}</div>
+
+    <p><span style="font-weight: bold">Description: </span>Details for the selected game</p>
+</div>
+<script src="src/details.js"></script>
+</body>
+
+</html>

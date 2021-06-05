@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="utf-8" http-equiv="encoding" />
+  <title>Game Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/vue-material.css" />
+  <script type="text/javascript" src="libs/vue.js"></script>
+  <script type="text/javascript" src="libs/vue-material.js"></script>
+  <script type="text/javascript" src="libs/axios.js"></script>
+  <script type="text/javascript" src="src/game-service.js"></script>
+</head>
+
+<style>
+  body {
+
+    background-image: url('blue_body_top.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    color: white;
+
+  }
+  a {
+    color: white;
+   }
+</style>
+<body>
+<div id="app">
+
+  <div class="title">Games</div>
+  <p style="text-align: center" v-if="games.length == 0">No game can be found</p>
+
+  <ul class="user-list" v-if="games.length > 0">
+    <li>
+      <div class="user-row-header">
+        <div class="user-name">Image</div>
+        <div class="user-name">Title</div>
+        <div class="user-city">Developer</div>
+        <div class="user-city">Publisher</div>
+        <div class="user-city">Price</div>
+        <div class="user-city">Options</div>
+        <a class="" :href="'add.html?'">Add a game</a>
+      </div>
+    </li>
+
+    <li v-for="game in games">
+      <div class="bord">
+        <span class="user-city"><img :src="game.image"></span>
+        <a class="user-city" :href="'details.html?id='+game.id">{{ game.title }}</a>
+        <span class="user-city"><i>{{ game.developer }}</i></span>
+        <span class="user-city"><i>{{ game.publisher }}</i></span>
+        <span class="user-city"><i>{{ game.price }} </i></span>
+        <button v-on:click="deleteGame(game.id)">Delete</button>
+        <a :href="'update.html?id='+game.id" target="_self">Update</a>
+
+      </div>
+    </li>
+  </ul>
+</div>
+<script src="src/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script type="text/javascript" src="libs/vue.js"></script><script type="text/javascript" src="libs/axios.js"></script>
+    <link rel="stylesheet" href="styles/actionbar.css" />
+</head>
+<style>
+    body {
+        background-image: url('blue_body_top.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
+<body>
+<a href="index.html">Home</a>
+<div id="add">
+    <p>Image: <input type="text" v-model="game.image"></p>
+    <p>Title: <input type="text" v-model="game.title"></p>
+    <p>Release Date: <input type="text" v-model="game.releasedate"></p>
+    <p>Developer: <input type="text" v-model="game.developer"></p>
+    <p>Publisher : <input type="text" v-model="game.publisher"></p>
+    <p>Genre: <input type="text" v-model="game.genre"></p>
+    <p>Operating system: <input type="text" v-model="game.OS"></p>
+    <p>Language: <input type="text" v-model="game.language"></p>
+    <p>Description: <input type="text" v-model="game.description"></p>
+    <p>Price: <input type="text" v-model="game.price"></p>
+    <button v-on:click="add(game)">Save</button>
+    <p>"You added stuff! GOOD JOB!"</p>
+</div>
+</div class="vid">
+<video width="1920" height="1080"  loop="" muted="" autoplay="" playsinline="" poster="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/77fcebec8525357e6135543e/page_bg_english.png?t=1620405626" class="fullscreen-bg__video">
+    <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/77fcebec8525357e6135543e/webm_page_bg_english.webm?t=1620405626" type="video/webm">
+    <source src="https://cdn.cloudflare.steamstatic.com/steam/clusters/frontpage/77fcebec8525357e6135543e/mp4_page_bg_english.mp4?t=1620405626" type="video/mp4">
+
+</video>
+<div/>
+<script src="src/add.js"></script>
+</body>
+</html>
